@@ -27,11 +27,13 @@ Vector::Vector(const Vector &v)
     z = v.z;
 }
 
-Vector::Vector(Vector &v)
+Vector::Vector(Vector&& v)
 {
-    x = v.x;
-    y = v.y;
-    z = v.z;
+	x = v.x;
+	y = v.y;
+	z = v.z;
+
+	v.x = v.y = v.z = 0;
 }
 
 Vector::~Vector()

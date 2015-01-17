@@ -12,6 +12,8 @@
 
 #include <iostream>
 #include <assert.h>
+
+#define _USE_MATH_DEFINES
 #include <math.h>
 
 const double PI = M_PI;
@@ -21,7 +23,7 @@ public:
     Vector();
     Vector(const float x_, const float y_, const float z_);
     Vector(const Vector& v);
-    Vector(Vector& v);
+	Vector(Vector&& v);
     ~Vector();
 
     bool operator==(const Vector& v) const;
